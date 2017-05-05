@@ -17,6 +17,16 @@
     <entity name="B" representedClassName="B" syncable="YES" codeGenerationType="class">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="otherThing" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="A" inverseName="thing" inverseEntity="A" syncable="YES"/>
+        <compoundIndexes>
+            <compoundIndex>
+                <index value="name"/>
+            </compoundIndex>
+        </compoundIndexes>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
         <element name="A" positionX="-63" positionY="-18" width="128" height="75"/>
